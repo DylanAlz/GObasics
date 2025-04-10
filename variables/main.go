@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"unsafe"
+	"strconv"
 )
 
 func main() {
@@ -51,4 +52,21 @@ func main() {
 	var newString string
 	newString = "Hello, NEW!"
 	fmt.Printf("String: %s\n", newString)
+
+{
+	//declaracion de variables en bloque
+	floatvar := 3.34
+	fmt.Printf("type: %T value: %f\n ",floatvar,floatvar)
+	floatstr := fmt.Sprintf("%f", floatvar) //convertir a string
+	fmt.Printf("type: %T value: %s ",floatstr,floatstr)
+
+	intval1, err := strconv.ParseInt("1333", 0, 64)
+	fmt.Println(err)
+	fmt.Printf("type: %T value: %d\n ",intval1,intval1)
+
+	varvector := []int{1,2,3,4,5}
+	fmt.Printf("Type: %T value: %v\n", varvector, varvector)
+
+}
+
 	} 
